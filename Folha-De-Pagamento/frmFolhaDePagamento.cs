@@ -28,6 +28,24 @@ namespace Folha_De_Pagamento
             {
                 salario = Convert.ToDouble(txtbSalarioInput.Text);
 
+                if (ckbPlanoDeSaude.Checked == true)
+                {
+                    salario = salario - 400;
+                }
+
+                if (cmbClubes.SelectedIndex == 1)
+                {
+                    salario = salario - 100;
+                }
+                if (cmbClubes.SelectedIndex == 2)
+                {
+                    salario = salario - 50;
+                }
+                if (cmbClubes.SelectedIndex == 3)
+                {
+                    salario = salario - 30;
+                }
+
                 if (salario < 2259.21)
                 {
                     impostoDeRenda = 0;
@@ -54,24 +72,6 @@ namespace Folha_De_Pagamento
 
                 txtbImpostoDeRenda.Text = impostoDeRenda.ToString();
                 salario = salario - impostoDeRenda;
-
-                if (ckbPlanoDeSaude.Checked == true)
-                {
-                    salario = salario - 400;
-                }
-
-                if (cmbClubes.SelectedIndex == 1)
-                {
-                    salario = salario - 100;
-                }
-                if (cmbClubes.SelectedIndex == 2)
-                {
-                    salario = salario - 50;
-                }
-                if (cmbClubes.SelectedIndex == 3)
-                {
-                    salario = salario - 30;
-                }
             }
             catch (Exception)
             {
