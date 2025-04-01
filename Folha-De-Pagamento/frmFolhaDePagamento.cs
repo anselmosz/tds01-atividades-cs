@@ -19,59 +19,58 @@ namespace Folha_De_Pagamento
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            double salarioBruto, impostoDeRenda, descontoClube, descontoPlanoDeSaude, salarioLiq;
+            double salario, impostoDeRenda;
 
-            salarioBruto = 0;
+            salario = 0;
             impostoDeRenda = 0;
-            descontoClube = 0;
-            descontoPlanoDeSaude = 0;
 
             try
             {
-                salarioBruto = Convert.ToDouble(txtbSalarioInput.Text);
+                salario = Convert.ToDouble(txtbSalarioInput.Text);
 
-                if (salarioBruto < 2259.21)
+                if (salario < 2259.21)
                 {
                     impostoDeRenda = 0;
                 }
                 else
                 {
-                    if (salarioBruto > 2259.20 && salarioBruto < 2826.66)
+                    if (salario > 2259.20 && salario < 2826.66)
                     {
-                        impostoDeRenda = (salarioBruto / 100) * 7.5;
+                        impostoDeRenda = (salario / 100) * 7.5;
                     }
-                    if (salarioBruto > 2826.65 && salarioBruto < 3751.06)
+                    if (salario > 2826.65 && salario < 3751.06)
                     {
-                        impostoDeRenda = (salarioBruto / 100) * 15;
+                        impostoDeRenda = (salario / 100) * 15;
                     }
-                    if (salarioBruto > 3751.05 && salarioBruto < 4664.69)
+                    if (salario > 3751.05 && salario < 4664.69)
                     {
-                        impostoDeRenda = (salarioBruto / 100) * 22.5;
+                        impostoDeRenda = (salario / 100) * 22.5;
                     }
-                    if (salarioBruto > 4664.68)
+                    if (salario > 4664.68)
                     {
-                        impostoDeRenda = (salarioBruto / 100) * 27.5;
+                        impostoDeRenda = (salario / 100) * 27.5;
                     }
                 }
 
                 txtbImpostoDeRenda.Text = impostoDeRenda.ToString();
+                salario = salario - impostoDeRenda;
 
                 if (ckbPlanoDeSaude.Checked == true)
                 {
-                    descontoPlanoDeSaude = 400;
+                    salario = salario - 400;
                 }
 
                 if (cmbClubes.SelectedIndex == 1)
                 {
-                    descontoClube = 100;
+                    salario = salario - 100;
                 }
                 if (cmbClubes.SelectedIndex == 2)
                 {
-                    descontoClube = 50;
+                    salario = salario - 50;
                 }
                 if (cmbClubes.SelectedIndex == 3)
                 {
-                    descontoClube = 30;
+                    salario = salario - 30;
                 }
             }
             catch (Exception)
@@ -89,9 +88,7 @@ namespace Folha_De_Pagamento
                 cmbClubes.SelectedIndex = 0;
             }
 
-            salarioLiq = salarioBruto - impostoDeRenda - descontoPlanoDeSaude - descontoClube;
-
-            txtbSalarioLiq.Text = Convert.ToString(salarioLiq);
+            txtbSalarioLiq.Text = Convert.ToString(salario);
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
