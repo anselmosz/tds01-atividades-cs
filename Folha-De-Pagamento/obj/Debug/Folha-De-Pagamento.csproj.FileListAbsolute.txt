@@ -1,0 +1,11 @@
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\bin\Debug\Folha-De-Pagamento.exe.config
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\bin\Debug\Folha-De-Pagamento.exe
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\bin\Debug\Folha-De-Pagamento.pdb
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\obj\Debug\Folha-De-Pagamento.csproj.AssemblyReference.cache
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\obj\Debug\Folha_De_Pagamento.Form1.resources
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\obj\Debug\Folha_De_Pagamento.frmFolhaDePagamento.resources
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\obj\Debug\Folha_De_Pagamento.Properties.Resources.resources
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\obj\Debug\Folha-De-Pagamento.csproj.GenerateResource.cache
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\obj\Debug\Folha-De-Pagamento.csproj.CoreCompileInputs.cache
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\obj\Debug\Folha-De-Pagamento.exe
+C:\Users\matheus.sanselmo1\Documents\Visual Studio 2022\TDS01-Atividades\Folha-De-Pagamento\obj\Debug\Folha-De-Pagamento.pdb
