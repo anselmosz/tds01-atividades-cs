@@ -166,6 +166,7 @@
             this.txtbSalarioInput.Name = "txtbSalarioInput";
             this.txtbSalarioInput.Size = new System.Drawing.Size(117, 26);
             this.txtbSalarioInput.TabIndex = 1;
+            this.txtbSalarioInput.TextChanged += new System.EventHandler(this.txtbSalarioInput_TextChanged);
             // 
             // txtbImpostoDeRenda
             // 

@@ -53,6 +53,7 @@ namespace Folha_De_Pagamento
                         impostoDeRenda = (salarioBruto / 100) * 27.5;
                     }
                 }
+
                 txtbImpostoDeRenda.Text = impostoDeRenda.ToString();
 
                 if (ckbPlanoDeSaude.Checked == true)
@@ -80,10 +81,12 @@ namespace Folha_De_Pagamento
                     MessageBoxIcon.Error,
                     MessageBoxDefaultButton.Button1);
                 txtbSalarioInput.Clear();
+                txtbSalarioInput.Focus();
                 txtbImpostoDeRenda.Clear();
                 txtbSalarioBruto.Clear();
                 txtbSalarioLiq.Clear();
                 ckbPlanoDeSaude.Checked = false;
+                cmbClubes.SelectedIndex = 0;
             }
 
             salarioLiq = salarioBruto - impostoDeRenda - descontoPlanoDeSaude - descontoClube;
@@ -94,6 +97,7 @@ namespace Folha_De_Pagamento
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtbSalarioInput.Clear();
+            txtbSalarioInput.Focus();
             txtbImpostoDeRenda.Clear();
             txtbSalarioBruto.Clear();
             txtbSalarioLiq.Clear();
@@ -104,6 +108,11 @@ namespace Folha_De_Pagamento
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtbSalarioInput_TextChanged(object sender, EventArgs e)
+        {
+            txtbSalarioBruto.Text = txtbSalarioInput.Text;
         }
     }
 }
